@@ -2303,6 +2303,13 @@ function endGame() {
 
       <button
         class="btn main"
+        id="shareE"
+      >
+        📸 COMPARTILHAR RESULTADO
+      </button>
+
+      <button
+        class="btn main"
         id="again"
       >
         JOGAR NOVAMENTE
@@ -2327,6 +2334,17 @@ function endGame() {
 
   const d =
     S.diff;
+
+  const shareE =
+    $('#shareE');
+
+  if (
+    shareE &&
+    typeof openSharePreview === 'function'
+  ) {
+    shareE.onclick =
+      openSharePreview;
+  }
 
   const again =
     $('#again');
